@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-maroon: #6B1020;
+    --color-maroon-dark: #240309;
+    --color-gold: #D4AF62;
+    --color-gold-light: #F3E5AB;
+    --color-ivory: #FFF8EA;
+  }
+
+  body {
+    background-color: #240309;
+    color: #FFF8EA;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Gold Foil Text Gradient */
+.text-gold-foil {
+  background: linear-gradient(
+    135deg,
+    #BF953F 0%,
+    #FCF6BA 25%,
+    #D4AF62 50%,
+    #FBF5B7 75%,
+    #AA771C 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
+
+.bg-gold-foil {
+  background: linear-gradient(
+    135deg,
+    #BF953F 0%,
+    #FCF6BA 25%,
+    #D4AF62 50%,
+    #FBF5B7 75%,
+    #AA771C 100%
+  );
+}
+
+.border-gold-foil {
+  border-image: linear-gradient(135deg, #BF953F, #FCF6BA, #D4AF62, #AA771C) 1;
+}
+
+/* 3D Perspective Utilities for the Envelope and Cards */
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Subtle Indian Silk / Brocade Pattern Overlay */
+.bg-brocade-pattern {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(212, 175, 98, 0.08) 2px, transparent 2.5px),
+    radial-gradient(circle at 0% 0%, rgba(212, 175, 98, 0.06) 4px, transparent 5px),
+    radial-gradient(circle at 100% 100%, rgba(212, 175, 98, 0.06) 4px, transparent 5px);
+  background-size: 36px 36px;
+}
+
+/* Ornamental Gold Box Shadow */
+.gold-glow {
+  box-shadow: 
+    0 10px 40px -10px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(212, 175, 98, 0.25),
+    inset 0 0 20px rgba(212, 175, 98, 0.12);
+}
+
+.gold-glow-strong {
+  box-shadow: 
+    0 20px 60px -10px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(212, 175, 98, 0.45),
+    inset 0 0 30px rgba(212, 175, 98, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A0206;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8F192E, #D4AF62, #8F192E);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF62;
+}
+
